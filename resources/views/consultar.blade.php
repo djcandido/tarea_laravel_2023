@@ -1,5 +1,4 @@
 @include('layouts.header')
-
     <h2>Section title</h2>
         <div class="table-responsive">
             <table class="table table-striped table-sm">
