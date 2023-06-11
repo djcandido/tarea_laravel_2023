@@ -1,5 +1,5 @@
 @include('layouts.header')
-            <div class="card-deck mb-3 text-center">
+            <div class="card-deck mb-2 text-center">
                 <div class="card mb-6 shadow-sm">
                     <div class="card-header">
                         <h4 class="my-0 font-weight-normal">Consultar</h4>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-deck mb-3 text-center">
+            <div class="card-deck mb-2 text-center">
                 <div class="card mb-6 shadow-sm">
                     <div class="card-header">
                         <h4 class="my-0 font-weight-normal">Actualizar</h4>
@@ -40,6 +40,18 @@
                         <p>En este apartado, usted podrá realizar las correspondientes eliminaciones de registros a la tabla "proyectos", mediante la consulta DML DELETE</p>
                         <!--<button type="button" class="btn btn-lg btn-block btn-primary">Ir a Eliminar</button>-->
                         <a href="{{ URL::route('eliminar') }}" class="btn btn-lg btn-block btn-primary stretched-link">Ir a eliminar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck mb-2 text-center">
+                <div class="card mb-12 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Informe</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Desde este vínculo usted podrá descargar un informe en documento pdf de todos los registros que se encuentran en la base de datos</p>
+                        <!--<button type="button" class="btn btn-lg btn-block btn-primary">Generar Informe</button>-->
+                        <a href="{{ URL::route('informe') }}" class="btn btn-lg btn-block btn-primary stretched-link">Generar Informe</a>
                     </div>
                 </div>
             </div>

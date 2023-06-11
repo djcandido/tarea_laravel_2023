@@ -96,3 +96,13 @@ Route::get('/delete/{id}', function($id){
     $afectados = $proyecto->eliminar($id);
     return $afectados;
 })->name("delete");
+
+
+
+
+Route::get('/informe', function(){
+    $proyecto = new ProyectosController;
+    $proyectos = $proyecto->listar();
+    $afectados = $proyecto->informe($proyectos);
+    return $afectados;
+})->name("informe");

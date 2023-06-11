@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Proyectos;
 use Illuminate\Http\Request;
+use PDF;
 
 class ProyectosController extends Controller
 {
@@ -50,5 +51,17 @@ class ProyectosController extends Controller
         $Proyectos = new Proyectos();
         $afectados = $Proyectos::where('id',$id)->delete();
         return $afectados;
+    }
+
+
+    public function informe($proyectos){
+        //$Proyectos = new Proyectos();
+        //$imagen = Storage::get('./storage/app/public/logo-csj.png');
+        //$imagen = Storage::disk('public')->path('logo/logo-csj.png');
+        //$imagen = public_path().Storage::url("logo-csj.png");
+        $data = array("proyectos"=>$proyectos);
+        $pdf = PDF::loadView('informe',compact("data"))->setPaper('a4', 'landscape');;
+        return $pdf->stream("prueba.pdf");
+        //return $data;
     }
 }
