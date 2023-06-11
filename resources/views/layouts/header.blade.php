@@ -6,12 +6,13 @@
         <meta name="description" content="">
         <meta name="author" content="Jaime Jeovanny Cortez Flores">
         <meta name="generator" content="Laravel 10.13.5">
+        <meta name="csrf-token" content="{{ csrf_token() }}" >
         <title>Actividad Evaluada Curso PHP-Laravel Junio 2023</title>
 
-
         <!-- Bootstrap core CSS -->
+        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+        
         <style>
             .bd-placeholder-img {
                 font-size: 1.125rem;
