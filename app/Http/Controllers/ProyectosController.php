@@ -61,7 +61,8 @@ class ProyectosController extends Controller
         //$imagen = public_path().Storage::url("logo-csj.png");
         $data = array("proyectos"=>$proyectos);
         $pdf = PDF::loadView('informe',compact("data"))->setPaper('a4', 'landscape');;
-        return $pdf->stream("prueba.pdf");
+        //return $pdf->stream("prueba.pdf");
+        return $pdf->download("informe.pdf");
         //return $data;
     }
 }
